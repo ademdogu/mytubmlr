@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 	end
 	root "posts#index"
 
+	resources :users, only: [:show]
+
 	get '/about', to: 'pages#about'
 end
